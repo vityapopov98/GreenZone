@@ -26,7 +26,7 @@ button{
   outline: none;
 }
 body{
-  background: url('crop-cropland-environment-259280.jpg') center bottom no-repeat;
+  background: url('../images/crop-cropland-environment-259280.jpg') center bottom no-repeat;
   background-attachment: fixed;
   background-size: cover;
   font-family: 'roboto';

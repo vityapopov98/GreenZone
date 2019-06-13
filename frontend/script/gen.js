@@ -58,7 +58,7 @@ function renderDevices(usersDevices){
 //в ссылках будет не html, а гет запрос на роут который высылает данные для рендера старницы с устройствами
 const kitchen = `<div class="item">
 <a href="kitchenDevices.html">
-    <img src="kitchen.png" alt="" srcset="">
+    <img src="images/kitchen.png" alt="" srcset="">
     <span>
         <div id="tempKitchen" class="temp dark">22</div>
         <i class="fas fa-thermometer-half dark"></i>
@@ -69,7 +69,7 @@ const kitchen = `<div class="item">
 
 const bedroom = `<div class="item">
 <a href="">
-    <img src="bedroom.png" alt="" srcset="">
+    <img src="images/bedroom.png" alt="" srcset="">
     <span>
             <div id="tempBedroom" class="temp">22</div>
             <i class="fas fa-thermometer-half dark"></i>
@@ -80,7 +80,7 @@ const bedroom = `<div class="item">
 
 const bathroom = `<div class="item">
 <a href="">
-    <img src="bathroom.png" alt="" srcset="">
+    <img src="images/bathroom.png" alt="" srcset="">
     <span>
             <div class="temp">22 &degC</div>
             <i class="fas fa-thermometer-half dark"></i>
@@ -92,7 +92,7 @@ const bathroom = `<div class="item">
 const childroom = `<div class="item">
 
 <button onclick="getDevices('childroom')">
-    <img src="childroom.png" alt="" srcset="">
+    <img src="images/childroom.png" alt="" srcset="">
     <span>
         <div id="tempChildroom" class="temp dark">22&degC</div> 
         <i class="fas fa-thermometer-half dark dark"></i>
@@ -104,7 +104,7 @@ const childroom = `<div class="item">
 
 const boysroom = `<div class="item">
 <a href="">
-    <img src="boysroom.png" alt="" srcset="">
+    <img src="images/boysroom.png" alt="" srcset="">
 </a>
 <div class="shadow">Гостевая</div>
 </div>`;
@@ -112,7 +112,7 @@ const boysroom = `<div class="item">
 const livingroom = `<div class="item">
 
 <button onclick="getDevices('livingroom')">
-    <img src="livingroom.png" alt="" srcset="">
+    <img src="images/livingroom.png" alt="" srcset="">
     <span>
             <div class="temp">22 &degC</div>
             
