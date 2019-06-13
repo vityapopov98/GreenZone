@@ -15,6 +15,8 @@ function initAuthControllers(app, passport)  {
 
     //-------- рендер страниц -------------
     app.get('/', sendHtml.index);
+    app.get('/store', sendHtml.store);
+    //app.get('/', sendHtml.index);
 
 
     
