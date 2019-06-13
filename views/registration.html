@@ -17,11 +17,11 @@
             <span></span>
         </div>
         <nav class="menu-nav">
-            <a href="/main.html">Главная</a>
-            <a href="/store.html">Магазин</a>
-            <a href="/index.html">Панель управления</a>
+            <a href="/main">Главная</a>
+            <a href="/store">Магазин</a>
+            <a href="/index">Панель управления</a>
             <a href="">Поддержка</a>
-            <a href="/index.html">Вход</a>
+            <a href="/index">Вход</a>
         </nav>
     </div>
     <div class="container">
@@ -29,42 +29,42 @@
             <h1>Регистрация</h1>
             <hr>
             <p>Зарегистрируйтесь в системе, что бы управлять устройствами в вашем доме</p>
-            <form method="POST" action="localhost:3000/api/signup">
-            <div class="smContainer">
-                <div class="row">
-                    <input type="text" name="userName" class="oneLineInput" id="userName" placeholder="Имя">
-                    <input type="text" name="userSurname" class="oneLineInput" id="userSurname" placeholder="Фамилия">
-                </div>
-                <span>Логин</span>
-                <input type="text" name="userEmail" placeholder="Email">
-                <span>Пароль</span>
-                <input type="text" name="userPassword" placeholder="Пароль">
-                <input type="text" name="userPasswordControl" placeholder="Повторите пароль">
-            </div>
-            <!-- <hr class="wid90">
-            <div class="smContainer">
-                    <h2>Комнаты</h2>
-                    <input type="text" name="" id="" placeholder="Название комнаты">
-                    <button class="addBtn"><i class="fas fa-plus-circle"></i> Добавить</button>
-            </div>
-            <hr class="wid90">
-            <div class="smContainer">
-                    <h2>Устройства</h2>
-                    <input type="text" name="" id="" placeholder="Устройство">
-                    <button class="addBtn"><i class="fas fa-plus-circle"></i> Добавить</button>
-            </div> -->
-            
-            <div class="smContainer">
-                    <!-- <label class="checkbox"><input type="checkbox"/> описание</label> -->
-                    <a href="" class="ligthText">я согласен с политикой обработки персональных данных</a>
+            <div class="reg" name="register">
+                <div class="smContainer">
                     <div class="row">
-                            <button id="sendBtn" class="orangeBtn" type="submit">
-                                Отправить
-                            </button>
-                            <button class="cancelBtn">Отмена</button>
+                        <input type="text" name="userName" class="oneLineInput" id="userName" placeholder="Имя">
+                        <input type="text" name="userSurname" class="oneLineInput" id="userSurname" placeholder="Фамилия">
                     </div>
-            </div>
-           </form>   
+                    <span>Логин</span>
+                    <input type="text" name="userEmail" placeholder="Email">
+                    <span>Пароль</span>
+                    <input type="text" name="userPassword" placeholder="Пароль">
+                    <input type="text" name="userPasswordControl" placeholder="Повторите пароль">
+                </div>
+                <!-- <hr class="wid90">
+                <div class="smContainer">
+                        <h2>Комнаты</h2>
+                        <input type="text" name="" id="" placeholder="Название комнаты">
+                        <button class="addBtn"><i class="fas fa-plus-circle"></i> Добавить</button>
+                </div>
+                <hr class="wid90">
+                <div class="smContainer">
+                        <h2>Устройства</h2>
+                        <input type="text" name="" id="" placeholder="Устройство">
+                        <button class="addBtn"><i class="fas fa-plus-circle"></i> Добавить</button>
+                </div> -->
+                
+                <div class="smContainer">
+                        <!-- <label class="checkbox"><input type="checkbox"/> описание</label> -->
+                        <a href="" class="ligthText">я согласен с политикой обработки персональных данных</a>
+                        <div class="row">
+                                <button id="sendBtn" class="orangeBtn" type="submit">
+                                    Отправить
+                                </button>
+                                <button class="cancelBtn">Отмена</button>
+                        </div>
+                </div>
+            </div>   
             
         </div>
     </div>
