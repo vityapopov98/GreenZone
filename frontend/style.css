@@ -1,0 +1,389 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+
+html,body{
+  padding: 0;
+  margin: 0;
+}
+@media (max-width:600px){
+  .banner h1{
+    text-shadow: 3px 3px 30px #000000b1;
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 0px;
+  }
+  .banner p{
+    text-shadow: 3px 3px 20px #000000d2;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0px;
+  }
+}
+button{
+  background: none;
+  border: none;
+  outline: none;
+}
+body{
+  background: url('crop-cropland-environment-259280.jpg') center bottom no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'roboto';
+}
+/* для главной страницы */
+.home{
+  background: url('architecture-bungalow-daylight-1396122.jpg') center center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.banner{
+  height: 75vh;
+  padding: 2rem;
+
+}
+
+.banner h1{
+  text-align: left;
+  
+  font-size: 5rem;
+  /* background: linear-gradient(  hsl(189, 67%, 41%) 20%, #187818 80%); */
+  /* -webkit-background-clip: text; */
+	/* -webkit-text-fill-color: transparent; */
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+.banner p{
+  font-size: 1.7rem;
+  color: white;
+  padding: 0px;
+}
+.banner button{
+  font-size: 1rem;
+  height: 2rem;
+  width: 8rem;
+  background-image: linear-gradient(#27a52b,#114813);
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+}
+.banner button:hover{
+  color: #ffffff;
+}
+.scroll{
+  position: absolute;
+  bottom: 5rem;
+  left: 50vw;
+  right: 50vw;
+  color: white;
+  font-size: 2rem;
+  
+}
+
+h1{
+  /* цвет по умолчанию белый. дописать в тег dark для черного */
+  text-align: center;
+  color: white;
+  font-size: 68px;
+}
+
+.container{
+  width: 80%;
+  min-width: 300px;
+  max-width: 900px;
+  margin: 5rem auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+@media(max-width:600px){
+  .container{
+    width: 100%;
+    min-width: 300px;
+    max-width: 900px;
+    margin: 5rem auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+}
+
+/* .header{
+background-color: #2b2b2be7;
+font-family: 'Roboto';
+-webkit-backdrop-filter: blur(5px);
+box-shadow: 0px 5px 10px #74747443;
+display: flex;
+justify-content: center;
+text-align: center;
+position: fixed;
+right: 0;
+left: 0;
+top: 0;
+padding-left: 5rem;
+padding-right: 5rem;
+z-index: 1030;
+}
+.header a{
+  color: #ffffff;
+  flex-grow: 0.1;
+  padding: 1rem;
+  text-decoration: none;
+}
+.header a:hover{
+  color: #27a52b;
+} */
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: #e4e4e4;
+}
+/* комнаты на страницы управления */
+img{
+  height: 14rem;
+  padding: 1rem;
+  border-radius: 2.5rem; 
+}
+
+/* картинки и блоки в ряд с адаптивностью */
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* item для отображения иконок температуры (где тикает таймер сейчас) */
+.item{
+  display:inline-block;   
+  position:relative;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.shadow{
+  text-shadow: 3px 3px 20px #000000b1;
+}
+.item span{
+  display:inline-block;
+  position:absolute;
+  top:30px;   
+  left:45px;
+   
+  /* Оформление текста */
+  color: #111111;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:20px; 
+}
+/* также для отображения температуры в блоке .item */
+.temp{
+  display: inline;
+  color:#333;
+}
+/* просто добавляет или меняет цвет текста на чергый */
+.dark{
+  color:#333;
+}
+/* просто маргин */
+.ma{
+  margin: 1rem;
+}
+/* --------- */
+.blur{
+color: white;
+background: #13131395;
+height: 100%;
+-webkit-backdrop-filter: blur(4px);
+}
+.blur h2{
+  font-size: 2.5rem;
+}
+.blur p{
+  font-family: 'Roboto', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  
+}
+
+p{
+  font-family: 'Roboto', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.inspire{
+  /* margin: 0px; */
+  position: relative;
+  padding: 1px;
+  height: 100vh;
+  background: url('phoneMac.png') center center no-repeat;
+  background-size: cover;
+}
+.inspire p{
+  position: absolute;
+  right: 15vw;
+  left: 15vw;
+  bottom: 0;
+  /* padding-top: 27rem;  */
+  color: #333;
+}
+.inspire h2{
+  font-size: 2.5rem;
+  color: #111111;
+}
+.whiteBlock{
+  height: 120vh;
+  background: white;
+  overflow:  auto;
+}
+.img{
+  width: 80%;
+  height: auto;
+}
+/* Вход */
+.whiteSmBlock{
+  /* height: 30vh; */
+  width: 500px;
+  margin: auto;
+  margin-top: 5rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  background: white;
+}
+/* для входа */
+.whiteSmBlock h1{
+  text-align: center;
+  color: #111111;
+  font-size: 2rem;
+  padding-top: 1rem;
+  /* padding-bottom: 0;  */
+}
+.whiteSmBlock p{
+  padding:  0 0.5rem 0 0.5rem;
+  font-weight: 300 !important;
+}
+.whiteSmBlock hr{
+  /* padding: 0; */
+  border: 1px solid rgba(120, 120, 120, 0.667);
+}
+.smContainer{
+  width: 60%;
+  box-sizing: border-box;
+  margin: auto;
+}
+.whiteSmBlock input{
+  font-size: 1.2rem;
+  border: 1px solid rgb(186, 186, 186);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+.whiteSmBlock input:focus{
+  border: 1px solid rgb(110, 160, 68);
+}
+@media(max-width:600px){
+  .whiteSmBlock input{
+    width: 100%;
+  }
+  .whiteSmBlock{
+    width: 90%;
+    margin-top: 0rem;
+  }
+  .smContainer{
+    width: 80%;
+  }
+}
+.smContainer a{
+  color: #333333;
+  font-family: 'Roboto', serif;
+  font-weight: bold;
+  margin: auto;
+}
+.smContainer a:hover{
+  color: rgb(89, 89, 89);
+}
+
+.orangeBtn{
+  /* margin-top: 2rem; */
+  font-size: 1rem;
+  height: 2rem;
+  margin: .5rem auto;
+  /* margin: auto; */
+  width: 6rem;
+  background-image: linear-gradient(#fe7e18,#eb5201);
+  border: none;
+  border-radius: 15px;
+  color: #ffffff;
+  outline: none;
+}
+.orangeBtn:hover{
+  background-image: linear-gradient(#ffa200,#ff5900);
+}
+.cancelBtn{
+  /* margin-top: 2rem; */
+  margin: .5rem auto;
+  /* margin: auto; */
+  font-size: 1rem;
+  height: 2rem;
+  width: 6rem;
+  background: white;
+  color: #333333;
+  border: 2px solid #333333;
+  border-radius: 15px;
+  outline: none;
+}
+.cancelBtn:hover{
+  color: #6a6a6a;
+  border: 2px solid #6a6a6a;
+}
+.errorLog{
+  font-size: 0.9rem;
+  color: red;
+  padding-top: 0px;
+  margin: 0;
+}
+/* решистрация инпуты в строку */
+.oneLineInput{
+  width: 40%!important;
+  margin: 0 0.2rem 0 0.2rem;
+  box-sizing: border-box;
+  display: inline;
+}
+.regBlock{
+  width: 90%;
+  box-sizing: border-box;
+}
+.smContainer span{
+  color: #6a6a6a;
+  font-weight: 700;
+}
+.smContainer hr{
+  width: 100%;
+}
+.smContainer h2{
+  font-size: 1.4rem;
+  color: #6a6a6a;
+}
+.wid90{
+  width: 90%;
+}
+.addBtn{
+  border: none;
+  font-size: 1rem;
+  color: #27a52b;
+  outline: none;
+  background: white;
+}
+.addBtn:hover{
+  color: #29bf2e;
+}
+.checkbox{
+  display: inline;
+  margin: 0;
+  width: 10px;
+}
+.ligthText{
+  font-weight: 300 !important;
+}

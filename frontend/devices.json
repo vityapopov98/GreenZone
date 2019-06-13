@@ -1,0 +1,4 @@
+{
+    "livingroom": "termostat,elCounter,light",
+    "childroom": "hygrometer"
+}

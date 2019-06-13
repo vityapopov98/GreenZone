@@ -1,0 +1,214 @@
+/* блоки для страницы с устройствами */
+.block{
+  /* background-color: #1b2210c1; #101010bd #1d1d1de4;*/
+    background-color: #101010bd;
+    width: 100%;
+    border-radius: 2rem;
+    color: white;
+}
+/* заголовок блока */
+.blockHead{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+.navBlock{
+  width: 100%;
+  color: white;
+  display: flex;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+/* просто паддинг. использовать отдельнро или через пробел с другими */
+.pa{
+  padding: 1rem;
+}
+.pa05{
+  padding: 0.5rem;
+}
+/* просто паддинг сверху */
+.paTop{
+    padding-top: 2rem;
+}
+/*просто текст огромный Large */
+.textL{
+font-size: 1.3rem;
+}
+/* просто ораньжевый */
+.orange{
+  color: #fe7e18;
+}
+/* маленький блок используется в блоках на старицах устройств */
+.smBlock{
+  width: 5rem;
+  text-align: center;
+  flex-grow: 0.3;
+}
+input{
+  width: 6rem;
+  display: flex;
+  flex-grow: 1;
+  margin: 1rem;
+  border-radius: 10px;
+  height: 1.5rem;
+  outline: none;
+    
+}
+#tReg{
+  background-color:#333;
+}
+p{
+text-align: center;
+}
+/* серая кнопка*/
+.tempBtn{
+    border: 2px solid #333333;
+    background-color: #333333;
+    color: white;
+    height: 2rem;
+    
+}
+.tempBtn:hover{
+    background-color: #505050;
+}
+.tempBtn:focus{
+    background-color: rgb(97, 96, 96);
+    border: 2px solid #505050;
+    outline: none;
+    
+}
+/* сркугление кнопки слева */
+.tBtnL{
+    border-radius: 20px 0px 0px 20px;
+    width: 3rem;
+}
+/* скругление кнопки справа */
+.tBtnR{
+    border-radius: 0px 20px 20px 0px;
+    width: 3rem;
+}
+/* скругление кнопки со всех краев */
+.tBtn{
+    border-radius: 20px;
+}
+
+/* разделительная линия белого цвета в блоках с устройствами */
+hr{
+  border: 1px solid rgba(255, 255, 255, 0.667);
+}
+
+/* Начало. кнопка переключатель как в блоке термостат */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(97, 96, 96);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(211, 211, 211);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #fe7e18;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* конец кнопки переключателя */
+
+.deviceRoom{
+  text-align: right;
+}
+
+/* ниже  МУСОР */
+  /* .blur{
+    background: url('rodion-kutsaev-956-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  filter: blur(10px) brightness(0.5); 
+  height: 300px;
+  border-radius: 3rem;
+  color: white;
+  text-align: center;
+}
+.widget {
+    border-radius: 3rem;
+    overflow: hidden;
+  }
+
+/*  NOT REQUIRED  */
+
+/* .text {
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    right: 1rem;
+  }
+  
+  .text h3 {
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+    color: #ffffff;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 38px;
+  }
+  
+  .text p {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px rgba(0, 0, 0, .1);
+    margin-top: 0px;
+    font-family: 'Lato', serif;
+    font-weight: 400;
+    font-size: 22px;
+  }  */
+
+
+  /* button */
+  /* Hide default HTML checkbox */
+  /* The switch - the box around the slider */

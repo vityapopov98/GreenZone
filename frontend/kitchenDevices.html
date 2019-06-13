@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="deviceStyle.css">
+
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- скрипт для пхп  и обновления данных-->
+    <script src="scriptDevise.js"></script>
+    <script src="device.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div class="header">
+                <a href="index.html">GreenZone</a>
+                <!-- <a href="">Главная</a>
+                <a href="">Магазин</a>
+                <a href="">Панель управления</a>
+                <a href="">Поддержка</a>
+                <a href=""><i class="fas fa-cart-arrow-down"></i></a> -->
+                <a href="login.html">Вход</a>
+        </div>
+        
+        <div class="container">
+            <!-- <div class="widget">
+                <div class="blur"></div>
+                <div class="text center">
+                        <h3 class="">Termostat</h3>
+                        <p>Go ahead, resize me.</p>
+                      </div>
+            </div> -->
+            <h1>Список устройств</h1>
+            <div class="navBlock shadow">
+
+                <!-- <a href="index.html"> -->
+                    <button onclick="getRooms()">
+                        <i class="fas fa-angle-left"></i> панель управления
+                    </button>
+                    <div class="deviceRoom">комната</div>
+                <!-- </a> -->
+            </div>
+            <div class="block">
+                <div class="blockHead"> Термостат</div>
+                <div class="row">
+                    <div class="smBlock pa">
+                        <i class="fas fa-thermometer-half fa-5x"></i>
+                    </div>
+                    <div class="smBlock pa">
+                        <p>
+                            выберете температуру регулирования  
+                        </p>
+                        <button id="tReg1" class="tempBtn tBtnL">t=22</button>
+                        <button id="tReg2" class="tempBtn tBtnR">t=11</button>
+                    </div>
+                    <div class="smBlock pa">
+                            <p>
+                                включить термостат  
+                            </p>
+                            <!-- button переключатель -->
+                            <form id="led">
+                                <label class="switch">
+                                <input id="termSwitch"  name="status" type="checkbox">
+                                <span class="slider round"></span>
+                                </label>
+                            </form>
+                    </div>
+                    <div class="smBlock pa">
+                            <p>
+                                состояние котла  
+                            </p>
+                            <i class="fab fa-gripfire fa-3x orange"></i>
+                        </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="smBlock pa textL">Кухня</div>
+                    <div id="content" class="smBlock pa textL">23</div>
+                </div>
+                <hr>
+                <div class="row">
+                        <div class="smBlock pa textL">Спальня</div>
+                        <div id="content-1" class="smBlock pa textL">23</div>
+                </div>
+                <hr>
+                <div class="row">
+                        <div class="smBlock pa textL">LED State</div>
+                        <div id="content-3" class="smBlock pa textL"></div>
+                </div>
+
+                <!-- <div class="row">
+                    <form  id="led" action="" method="post"  >
+                        <label><input type="radio" name="status" value="1"> ON </label>
+                        <label><input type="radio" name="status" value="0"> OFF </label>
+                        <br>
+                        <input class="submitButton" type="submit" value="Отправить" onclick="AjaxFormRequest('messegeResult', 'led', 'transfer/led.php')" >
+                        </form>
+                </div> -->
+
+                <div class="row">
+                        <a href="tempSettings.html">
+                                <button class="tempBtn tBtn ma">Настройки</button>
+                        </a>
+                </div>
+            </div>
+
+            <div class="ma"></div>
+            <div class="block">
+                <div class="blockHead">Счетчик</div>
+                <div class="row">
+                    <div class="smBlock"><i class="fab fa-cloudscale fa-5x"></i></div>
+                    <div class="smBlock paTop textL">Дом</div>
+                    <div class="smBlock paTop textL">234545</div>
+                </div>
+                <div class="pa"></div>
+            </div>
+
+            <div class="ma"></div>
+            <div class="block">
+                <div class="blockHead">Термометр</div>
+                <div class="row">
+                    <div class="smBlock textL pa">Кухня</div>
+                    <div class="smBlock textL pa">=2342</div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="smBlock textL pa">Кухня</div>
+                    <div class="smBlock textL pa">=2342</div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+</body>
+</html>

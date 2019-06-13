@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    background: url('clouds-dawn-dusk-777211.jpg') center bottom no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'roboto';
+  }
+
+.container{
+width: 80%;
+min-width: 300px;
+max-width: 900px;
+margin: 5rem auto;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+/* картинки и блоки в ряд с адаптивностью */
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+/* хэдер не адаптивный */
+.header{
+    /* background-color: #ffffff; для светлой версии*/
+    background-color: #1b2210c1;
+    font-family: 'Roboto';
+    box-shadow: 0px 5px 10px #74747443;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    z-index: 1030;
+}
+.header a{
+    /*color: #333333; для светлой версии*/
+    color: #ffffff; 
+    flex-grow: 0.1;
+    padding: 1rem;
+    text-decoration: none;
+}
+.header a:hover{
+    /* color: #fe7e18; для светлой версии*/
+    color: #27a52b;
+}
+/* хэдер для мобилки */
+@media (max-width:600px){
+
+}
+
+/* страница комнат */
+/* item для отображения иконок температуры (где тикает таймер сейчас) */
+.item{
+    display:inline-block;   
+    position:relative;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.item span{
+    display:inline-block;
+    position:absolute;
+    top:30px;   
+    left:30px;
+    /* Оформление текста */
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px; 
+}
