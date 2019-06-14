@@ -27,12 +27,14 @@ function start() {
 
     password.addEventListener('input', () => {
         if(!(password.value === repassword.value)){
+            password.classList.add('errorInput');
             errorHandler(passwordError, 'пароли не совпадают');
         }
     });
 
     repassword.addEventListener('input', () => {
         if(!(password.value === repassword.value)){
+            repassword.classList.add('errorInput');
             errorHandler(repasswordError, 'пароли не совпадают');
         }
     });
