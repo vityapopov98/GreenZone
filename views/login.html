@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/deviceStyle.css">
+    <link rel="stylesheet" href="css/header.css">
     <script type="module" src="script/users/sign_In.js"></script>
 
     <title>Вход</title>
 </head>
 <body>
-        <div class="header">
+        <div id="header">
+            <div class="menu-btn">
+                <span></span>
+            </div>
             <nav class="menu-nav">
                 <a href="/">Главная</a>
                 <a href="/store">Магазин</a>
@@ -25,12 +29,13 @@
         <div class="whiteSmBlock">
             <h1>Вход</h1>
             <hr>
-            <div class="form">
+            <div class="smContainer"></div>
+            <!-- <div class="form"> -->
                 <input type="text" id="email" placeholder="Логин">
                 <!-- не понимаю как должно работать. errorLog для дизайна. emailError для скрипта -->
-                <span class="errorLog emailError"></span>
+                <span class="errorLogOff emailError"></span>
                 <input type="password" autocomplete="on | off"  id="password" placeholder="Пароль">
-                <span class="errorLog passwordError"></span>
+                <span class="errorLogOf passwordError"></span>
                 <div class="row">
                     <a href="/registration">Регистрация</a>
                     <a href=""> Забыли пароль?</a>
@@ -38,8 +43,8 @@
                 <div class="row">
                     <button id="submit" class="orangeBtn">Вход</button>
                 </div>
-            </div>
-
+            <!-- </div> -->
+            </div>              
 
         </div>
     </div>

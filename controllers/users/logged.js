@@ -1,7 +1,7 @@
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) 
         return next();
-    res.redirect('/sign_In');
+    res.redirect('/login');
 }
 
 function loggedCheker(req, res, next) {

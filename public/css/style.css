@@ -353,7 +353,7 @@ p{
 }
 /* решистрация инпуты в строку */
 .oneLineInput{
-  width: 40%!important;
+  width: 40% !important;
   margin: 0 0.2rem 0 0.2rem;
   box-sizing: border-box;
   display: inline;
