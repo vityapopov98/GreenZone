@@ -129,21 +129,21 @@ const login = `<div class="whiteSmBlock">
 <hr>
 <div class="smContainer">
     <div class="pa05"></div>
-    <form id="loginForm" onsubmit="return false;">
-    <input type="text" name="" id="userLogin" placeholder="Логин">
-    <!-- <span class="errorLog">Неправильное имя полльзователя</span> -->
-    <input type="password" autocomplete="on | off" name="" id="userPassword" placeholder="Пароль">
-    <!-- <span class="errorLog">Неверный пароль</span> -->
-    <div class="row">
-        <a href="registration.html">Регистрация</a>
-        <a href=""> Забыли пароль?</a>
-
-        <button class="orangeBtn" id="btnSubmitLog" onclick="passwordCheck(); return false;">
-            Вход
-        </button>
-    </div>
-    </form>
-        
+    
+    <input type="text" id="email" placeholder="Логин">
+                <!-- не понимаю как должно работать. errorLog для дизайна. emailError для скрипта -->
+                <span class="errorLog emailError"></span>
+                <input type="password" autocomplete="on | off"  id="password" placeholder="Пароль">
+                <span class="errorLog passwordError"></span>
+                <div class="row">
+                    <a href="registration.html">Регистрация</a>
+                    <a href=""> Забыли пароль?</a>
+                </div>
+                <div class="row">
+                    <button id="submit" class="orangeBtn">
+                        Вход
+                    </button>
+                </div>
     
 </div>
 
