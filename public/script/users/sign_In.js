@@ -1,3 +1,4 @@
+import { showHint, hideHint, errorHandler } from "../helpers.js"
 
 document.addEventListener('DOMContentLoaded', start);
 
