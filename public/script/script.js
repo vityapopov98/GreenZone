@@ -9,37 +9,28 @@ window.onload= function(){
     }
     else{
         renderLogin();
-        //колхоз, который должен происходить на серваке
-        //видимо тут вытаскиваем инфу с полей и отсылаем POST запросом на сервак
-        //тут потом обрабатываем ну или в функции
-        var loginForm = document.getElementById('loginForm');//элемент формы входа
-        
-        console.log(loginForm)//форма отправляется на сервак
-        var userLogin = document.getElementById('userLogin');//это используется в passwordCheck, но если я это перенесу туда, то почему-то не работает
-        var userPassword = document.getElementById('userPassword');
+        //sign_In вот тут по идее
        
     }
-    // render(usersRoom);
-//update data был здесь
 
 }
 
-function passwordCheck(){
-    console.log(userLogin.value);//проверяем правильность пароля
-    //alert(userLogin.value);
+// function passwordCheck(){
+//     console.log(userLogin.value);//проверяем правильность пароля
+//     //alert(userLogin.value);
     
-    if(userLogin.value=='admin' && userPassword.value=='123'){
-        userAuth=true;
-        //удалить вход
-        var wBlock = document.querySelector('.whiteSmBlock');
-         console.log(wBlock);
-         wBlock.remove();//удаляем блок входа
-        //alert('вхожу');
-        getRooms();//достаем комнаты и рендерим их
-    }
+//     if(userLogin.value=='admin' && userPassword.value=='123'){
+//         userAuth=true;
+//         //удалить вход
+//         var wBlock = document.querySelector('.whiteSmBlock');
+//          console.log(wBlock);
+//          wBlock.remove();//удаляем блок входа
+//         //alert('вхожу');
+//         getRooms();//достаем комнаты и рендерим их
+//     }
 
-return false
-}
+// return false
+// }
 
 function getRooms(){
     //можно использовать такой роут localhost:3000/getrooms

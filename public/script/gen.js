@@ -132,11 +132,11 @@ const login = `<div class="whiteSmBlock">
     
     <input type="text" id="email" placeholder="Логин">
                 <!-- не понимаю как должно работать. errorLog для дизайна. emailError для скрипта -->
-                <span class="errorLog emailError"></span>
+                <span class="errorLogOff emailError"></span>
                 <input type="password" autocomplete="on | off"  id="password" placeholder="Пароль">
-                <span class="errorLog passwordError"></span>
+                <span class="errorLogOff passwordError"></span>
                 <div class="row">
-                    <a href="registration.html">Регистрация</a>
+                    <a href="/registration">Регистрация</a>
                     <a href=""> Забыли пароль?</a>
                 </div>
                 <div class="row">

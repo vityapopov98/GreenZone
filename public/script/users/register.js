@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', start);
 function start() {
     const serverError = document.querySelector(".serverError")
 
+    const passwordError = document.querySelector('.passwordError');
+    const repasswordError = document.querySelector('.repasswordError');
+
     const email = document.getElementById('email');
     const password = document.querySelector('#password')
     const repassword = document.getElementById("repassword")
@@ -14,14 +17,24 @@ function start() {
 
     email.addEventListener('input', () => {
         console.log("e"); 
+        if(!(/.*@.*\.[A-z]/.test(email.value))){
+            //ошибка
+            errorHandler(email, 'Введите, пожалуйста, правильный email')
+        }
     });
 
     password.addEventListener('input', () => {
         console.log("p"); 
+        if(!(password.value === repassword.value)){
+            errorHandler(passwordError, 'пароли не совпадают');
+        }
     });
 
     repassword.addEventListener('input', () => {
         console.log("r"); 
+        if(!(password.value === repassword.value)){
+            errorHandler(repasswordError, 'пароли не совпадают');
+        }
     });
 
     submitBtn.addEventListener('click', () => {       

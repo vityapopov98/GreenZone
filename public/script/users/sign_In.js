@@ -11,6 +11,18 @@ function start() {
     const password = document.querySelector('#password')
     const sendBtn = document.querySelector("#submit")
     
+    email.addEventListener('input', () => {
+        console.log("e"); 
+        if(!(/.*@.*\.[A-z]/.test(email.value))){
+            //ошибка
+            errorHandler(emailError, 'Введите, пожалуйста, правильный email')
+        }
+    });
+
+    password.addEventListener('input', () => {
+        console.log("p"); 
+
+    });
 
 
     sendBtn.addEventListener('click', (event) => {

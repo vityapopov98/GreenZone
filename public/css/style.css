@@ -338,11 +338,14 @@ p{
   color: #6a6a6a;
   border: 2px solid #6a6a6a;
 }
-.errorLog{
+.errorLogOn{
   font-size: 0.9rem;
   color: red;
   padding-top: 0px;
   margin: 0;
+}
+.errorLogOff{
+  display: none;
 }
 /* решистрация инпуты в строку */
 .oneLineInput{
