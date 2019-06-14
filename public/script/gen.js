@@ -27,7 +27,7 @@ function render(usersRoom){
     
 }
 
-function renderLogin(){
+export function renderLogin(){
     var place = document.querySelector('.container');
     place.insertAdjacentHTML('beforeend', login);
 

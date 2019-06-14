@@ -14,9 +14,11 @@ function start() {
     const repassword = document.getElementById("repassword")
     const submitBtn = document.querySelector("#submit")
 
+    const name = document.querySelector("#userName")
+    const surname = document.querySelector("#userSurname")
+
 
     email.addEventListener('input', () => {
-        console.log("e"); 
         if(!(/.*@.*\.[A-z]/.test(email.value))){
             //ошибка
             errorHandler(email, 'Введите, пожалуйста, правильный email')
@@ -24,14 +26,12 @@ function start() {
     });
 
     password.addEventListener('input', () => {
-        console.log("p"); 
         if(!(password.value === repassword.value)){
             errorHandler(passwordError, 'пароли не совпадают');
         }
     });
 
     repassword.addEventListener('input', () => {
-        console.log("r"); 
         if(!(password.value === repassword.value)){
             errorHandler(repasswordError, 'пароли не совпадают');
         }
@@ -51,7 +51,9 @@ function start() {
                         },
                         body: JSON.stringify({
                             "email": email.value,
-                            "password": password.value
+                            "password": password.value,
+                            "name": name.value,
+                            "surname": surname.value
                         })
                     }
                     

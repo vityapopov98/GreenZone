@@ -6,8 +6,8 @@ const index = (req, res ) => {
     res.sendFile(config.viewsDir + "index.html")
 }
 
-const kitchenDevice = (req, res ) => {
-    res.sendFile(config.viewsDir + "kitchenDevice.html")
+const kitchenDevices = (req, res ) => {
+    res.sendFile(config.viewsDir + "kitchenDevices.html")
 }
 
 const login = (req, res ) => {
@@ -25,7 +25,7 @@ const store = (req, res ) => {
 
 module.exports = {
     index,
-    kitchenDevice,
+    kitchenDevices,
     login,
     registration,
     store

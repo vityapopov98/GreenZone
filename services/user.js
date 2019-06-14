@@ -17,10 +17,12 @@ function getUserByEmail(email) {
     })
 }
 
-function createUser(email, password) {
+function createUser(email, password, name, surname ) {
     return User.create({
         email,
-        password
+        password,
+        name,
+        surname
     })
 }
 
