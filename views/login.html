@@ -26,16 +26,17 @@
             <div class="smContainer">
                 <div class="pa05"></div>
                 <form>
-                <input type="text" name="" id="" placeholder="Логин">
-                <!-- <span class="errorLog">Неправильное имя полльзователя</span> -->
-                <input type="password" autocomplete="on | off" name="" id="" placeholder="Пароль">
-                <!-- <span class="errorLog">Неверный пароль</span> -->
+                <input type="text" id="email" placeholder="Логин">
+                <!-- не понимаю как должно работать. errorLog для дизайна. emailError для скрипта -->
+                <span class="errorLog emailError"></span>
+                <input type="password" autocomplete="on | off"  id="password" placeholder="Пароль">
+                <span class="errorLog passwordError"></span>
                 <div class="row">
                     <a href="registration.html">Регистрация</a>
                     <a href=""> Забыли пароль?</a>
                 </div>
                 <div class="row">
-                    <button class="orangeBtn">
+                    <button id="submit" class="orangeBtn">
                         Вход
                     </button>
                 </div>

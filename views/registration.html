@@ -32,14 +32,14 @@
             <div class="reg" name="register">
                 <div class="smContainer">
                     <div class="row">
-                        <input type="text" name="userName" class="oneLineInput" id="userName" placeholder="Имя">
-                        <input type="text" name="userSurname" class="oneLineInput" id="userSurname" placeholder="Фамилия">
+                        <input type="text" class="oneLineInput" id="userName" placeholder="Имя">
+                        <input type="text" class="oneLineInput" id="userSurname" placeholder="Фамилия">
                     </div>
-                    <span>Логин</span>
-                    <input type="text" name="userEmail" placeholder="Email">
+                    <span>Электронная почта</span>
+                    <input type="text" id="email" placeholder="Email">
                     <span>Пароль</span>
-                    <input type="text" name="userPassword" placeholder="Пароль">
-                    <input type="text" name="userPasswordControl" placeholder="Повторите пароль">
+                    <input type="text" id="password" placeholder="Пароль">
+                    <input type="text" id="repassword" placeholder="Повторите пароль">
                 </div>
                 <!-- <hr class="wid90">
                 <div class="smContainer">
@@ -55,10 +55,9 @@
                 </div> -->
                 
                 <div class="smContainer">
-                        <!-- <label class="checkbox"><input type="checkbox"/> описание</label> -->
                         <a href="" class="ligthText">я согласен с политикой обработки персональных данных</a>
                         <div class="row">
-                                <button id="sendBtn" class="orangeBtn" type="submit">
+                                <button id="submit" class="orangeBtn">
                                     Отправить
                                 </button>
                                 <button class="cancelBtn">Отмена</button>

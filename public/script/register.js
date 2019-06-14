@@ -14,32 +14,35 @@ function start() {
 
 
     submitBtn.addEventListener('click', () => {       
-    // валидация на фронте пройдена, делаем запрос к серверу и смотрим на его ответ
-            console.log("запрос")
-        
-            const options = {
-                method:"post",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "email": email.value,
-                    "password": password.value
-                })
-            }
-            
-            fetch("/register", options).then(response => {
-                if (response.ok) {
-                    document.location.href = "/"
-                } else {
-                    response.text().then(error => {
-                        console.log(error)
-                        errorHandler(serverError, error)
+        if(password===repassword){//если пользователь ввел парольдва раза правильно
+
+            // валидация на фронте пройдена, делаем запрос к серверу и смотрим на его ответ
+                    console.log("запрос")
+                
+                    const options = {
+                        method:"post",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            "email": email.value,
+                            "password": password.value
+                        })
+                    }
+                    
+                    fetch("/register", options).then(response => {
+                        if (response.ok) {
+                            document.location.href = "/"
+                        } else {
+                            response.text().then(error => {
+                                console.log(error)
+                                errorHandler(serverError, error)
+                            })
+                        }
+                    }).catch(err => {
+                        console.error(err)
                     })
-                }
-            }).catch(err => {
-                console.error(err)
-            })
+        }
     },
     false
 );
