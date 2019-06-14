@@ -1,5 +1,5 @@
 import { showHint, hideHint, errorHandler } from "../helpers.js"
-
+console.log("p")
 document.addEventListener('DOMContentLoaded', start);
 
 function start() {
@@ -38,7 +38,7 @@ function start() {
         }
         fetch("/sign_In", options).then(response => {
             if (response.ok) {
-                document.location.href = "/datasPage"
+                document.location.href = "/"
             }
             else {
                 response.text().then(error => {

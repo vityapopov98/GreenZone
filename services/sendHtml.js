@@ -11,7 +11,7 @@ const kitchenDevices = (req, res ) => {
 }
 
 const login = (req, res ) => {
-    res.sendFile(config.viewsDir + "index.html")
+    res.sendFile(config.viewsDir + "login.html")
 }
 
 const registration = (req, res ) => {

@@ -15,10 +15,10 @@ function initAuthControllers(app, passport)  {
 
     //-------- рендер страниц -------------
     app.get('/', sendHtml.index);
-    app.get('/store', sendHtml.store);
+    app.get('/store', isLoggedIn, sendHtml.store);
     app.get('/registration', sendHtml.registration);
     app.get('/login', sendHtml.login);
-    app.get('/kitchenDevices', sendHtml.kitchenDevices);
+    app.get('/kitchenDevices', isLoggedIn, sendHtml.kitchenDevices);
 
 
     
