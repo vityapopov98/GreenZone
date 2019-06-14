@@ -339,13 +339,17 @@ p{
   border: 2px solid #6a6a6a;
 }
 .errorLogOn{
-  font-size: 0.9rem;
-  color: red;
+  font-size: 0.7rem;
+  font-weight: 300 !important;
+  color: red !important;
   padding-top: 0px;
   margin: 0;
 }
 .errorLogOff{
   display: none;
+}
+.errorInput{
+  border: 1px solid rgb(255, 0, 0) !important;
 }
 /* решистрация инпуты в строку */
 .oneLineInput{
