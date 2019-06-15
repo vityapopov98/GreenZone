@@ -1,0 +1,104 @@
+body{  
+    background: url("crop-cropland-environment-259280.jpg") center;
+    background-attachment: fixed;
+    background-size: cover;   
+    box-sizing:border-box;
+    margin: 0%;
+}
+
+.window{
+    background: #dddddd;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    
+}
+
+ul{
+    list-style: none;
+}
+
+.title{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer; 
+    line-height: auto;
+    padding: 1rem;
+}
+.title h3{
+    margin: 0;   
+}
+
+.title:hover{
+    background: #0f0f0f43
+}
+
+.nameOfUser{
+    border-top: #0f0f0f43 solid 2px;
+    border-bottom: #0f0f0f43 solid 2px;
+    text-align: center;
+}
+
+.devices{
+    border-bottom: #0f0f0f43 solid 2px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.device{
+    overflow: hidden;
+    border-top: #0f0f0f43 solid 2px;
+}
+.device:last-child{
+    margin-bottom: 15px;
+    border-bottom: #0f0f0f43 solid 2px;
+}
+.device ul{
+    transition: max-height 1s, opacity 1s;
+    transition-timing-function: ease-out;
+    opacity: 0;
+    max-height: 0;
+    padding-left: 10px;
+}
+
+.device.open ul{
+    max-height: 300px;
+    opacity: 1;
+}
+
+.open h3 i{
+    transform: rotate(90deg); 
+    transition-duration: 1s;
+}
+.fas{
+    transform: rotate(0deg); 
+    transition-duration: 1s;
+}
+
+.rooms{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10px;
+}
+
+.rooms li{
+    border-top: #0f0f0f43 solid 2px;   
+}
+
+
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+ul{
+    padding-left: 0;
+}
+

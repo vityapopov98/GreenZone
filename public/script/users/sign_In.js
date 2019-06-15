@@ -10,14 +10,21 @@ function start() {
 
     const password = document.querySelector('#password')
     const sendBtn = document.querySelector("#submit")
+
     
-    email.addEventListener('input', () => {
-        console.log("e"); 
+    function emailErrorHandler(){
         if(!(/.*@.*\.[A-z]/.test(email.value))){
             //ошибка
+            email.classList.add('errorInput');
             errorHandler(emailError, 'Введите, пожалуйста, правильный email')
         }
-    });
+        else{
+            email.classList.remove('errorInput');
+            hideHint(emailError);
+        }
+    }
+    //тут делей не писал. не понимаю почему, но это работает
+    email.addEventListener('keydown', emailErrorHandler.delayed(2000));
 
     password.addEventListener('input', () => {
         console.log("p"); 

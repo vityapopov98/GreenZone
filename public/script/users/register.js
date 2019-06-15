@@ -19,7 +19,7 @@ function start() {
     const surname = document.querySelector("#userSurname")
 
     //обработчики ошибок полей регистрации
-    function emailErrorHandler(){
+    function emailErrorHandler(){//как бы так перенести это в helper.js 
         if(!(/.*@.*\.[A-z]/.test(email.value))){
             //ошибка
             email.classList.add('errorInput');
@@ -47,14 +47,14 @@ function start() {
     }
 
     //задержка обработчиков
-    Function.prototype.delayed = function (delay) { // копипаст с хабра
-        var timer = 0;
-        var callback = this;
-        return function() {
-            clearTimeout(timer);
-            timer = setTimeout(callback, delay);
-        };
-    };
+    // Function.prototype.delayed = function (delay) { // копипаст с хабра
+    //     var timer = 0;
+    //     var callback = this;
+    //     return function() {
+    //         clearTimeout(timer);
+    //         timer = setTimeout(callback, delay);
+    //     };
+    // };
 
     email.addEventListener('keydown', emailErrorHandler.delayed(2000));
     
