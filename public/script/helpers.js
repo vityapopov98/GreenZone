@@ -8,7 +8,7 @@ export function showHint(widget, str) {
 
 export function hideHint(widget) {
     widget.innerHTML = '';
-    widget.className = 'erroeLogOn';
+    widget.className = 'erroeLogOff';
     // widget.classList.toggle('errorLogOn');
 }
 

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', start);
 function start() {
     const serverError = document.querySelector(".serverError")
 
+    const emailError = document.querySelector('.emailError');
     const passwordError = document.querySelector('.passwordError');
     const repasswordError = document.querySelector('.repasswordError');
 
@@ -17,27 +18,55 @@ function start() {
     const name = document.querySelector("#userName")
     const surname = document.querySelector("#userSurname")
 
-
-    email.addEventListener('input', () => {
+    //обработчики ошибок полей регистрации
+    function emailErrorHandler(){
         if(!(/.*@.*\.[A-z]/.test(email.value))){
             //ошибка
-            errorHandler(email, 'Введите, пожалуйста, правильный email')
+            email.classList.add('errorInput');
+            errorHandler(emailError, 'Введите, пожалуйста, правильный email')
         }
-    });
+        else{
+            email.classList.remove('errorInput');
+            hideHint(emailError);
+        }
+    }
 
-    password.addEventListener('input', () => {
+    function repasswordErrorHandler(){
         if(!(password.value === repassword.value)){
             password.classList.add('errorInput');
-            errorHandler(passwordError, 'пароли не совпадают');
-        }
-    });
-
-    repassword.addEventListener('input', () => {
-        if(!(password.value === repassword.value)){
             repassword.classList.add('errorInput');
+            errorHandler(passwordError, 'пароли не совпадают');
             errorHandler(repasswordError, 'пароли не совпадают');
         }
+        else{
+            password.classList.remove('errorInput');
+            repassword.classList.remove('errorInput');
+            hideHint(passwordError);
+            hideHint(repasswordError);
+        }
+    }
+
+    //задержка обработчиков
+    Function.prototype.delayed = function (delay) { // копипаст с хабра
+        var timer = 0;
+        var callback = this;
+        return function() {
+            clearTimeout(timer);
+            timer = setTimeout(callback, delay);
+        };
+    };
+
+    email.addEventListener('keydown', emailErrorHandler.delayed(2000));
+    
+//ненужный как мне кажется
+    password.addEventListener('input', () => {
+        // if(!(password.value === repassword.value)){
+        //     password.classList.add('errorInput');
+        //     errorHandler(passwordError, 'пароли не совпадают');
+        // }
     });
+
+    repassword.addEventListener('keydown', repasswordErrorHandler.delayed(2000));
 
     submitBtn.addEventListener('click', () => {       
         if(password.value===repassword.value){//если пользователь ввел парольдва раза правильно
@@ -77,3 +106,4 @@ function start() {
 );
 
 }
+

@@ -2,18 +2,18 @@ var usersRoom //= ['кухня', 'спальня', 'ванная', 'гостин
 var userAuth = false;//запрашивается с сервака пользователь авторизован или нет
 var devices = [];
 
-import { renderLogin } from "./gen.js"
+import { render, renderLogin, renderDevices } from "./gen.js"
 
 window.onload= function(){
     
-    if(userAuth){
+   // if(userAuth){
         getRooms();
-    }
-    else{
-        renderLogin();
+   // }
+   // else{
+        //renderLogin();
         //sign_In вот тут по идее
        
-    }
+    //}
 
 }
 

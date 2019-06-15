@@ -1,6 +1,6 @@
 
 
-function render(usersRoom){
+export function render(usersRoom){
     
     var place = document.querySelector('.row');
     console.log('kitchen');
@@ -33,7 +33,7 @@ export function renderLogin(){
 
 }
 
-function renderDevices(usersDevices){
+export function renderDevices(usersDevices){
     var placeForDevices = document.querySelector('.container');
     usersDevices.forEach(element =>{
         if(element=='termostat'){
