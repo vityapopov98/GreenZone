@@ -22,11 +22,15 @@ const store = (req, res ) => {
     res.sendFile(config.viewsDir + "store.html")
 }
 
+const account = (req, res ) => {
+    res.sendFile(config.viewsDir + "account.html")
+}
 
 module.exports = {
     index,
     kitchenDevices,
     login,
     registration,
-    store
+    store,
+    account
 }

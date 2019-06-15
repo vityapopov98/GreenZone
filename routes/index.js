@@ -19,6 +19,7 @@ function initAuthControllers(app, passport)  {
     app.get('/registration', sendHtml.registration);
     app.get('/login', sendHtml.login);
     app.get('/kitchenDevices', isLoggedIn, sendHtml.kitchenDevices);
+    app.get('/account', isLoggedIn, sendHtml.account);
 
 
     

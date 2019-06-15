@@ -57,7 +57,7 @@ export function renderDevices(usersDevices){
 
 //в ссылках будет не html, а гет запрос на роут который высылает данные для рендера старницы с устройствами
 const kitchen = `<div class="item">
-<a href="kitchenDevices.html">
+<a href="/kitchenDevices">
     <img src="images/kitchen.png" alt="" srcset="">
     <span>
         <div id="tempKitchen" class="temp dark">22</div>
