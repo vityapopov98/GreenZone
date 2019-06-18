@@ -19,6 +19,10 @@ const login = (req, res ) => {
     }
 }
 
+const success = (req, res) => {
+    res.send("SUCCESS")
+}
+
 const registration = (req, res ) => {
     if (req.isAuthenticated()) {
         res.redirect("/account")
@@ -42,5 +46,6 @@ module.exports = {
     login,
     registration,
     store,
-    account
+    account,
+    success
 }

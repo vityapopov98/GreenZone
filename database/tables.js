@@ -1,7 +1,7 @@
 const models = require('./models');
 
 const User = models.users
-const Room = models.Rooms
+const Room = models.rooms
 
 module.exports = {
     User,

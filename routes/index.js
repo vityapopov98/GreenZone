@@ -4,7 +4,7 @@ const sendHtml = require("../services/sendHtml")
 
 //  проверка логирования
 const { isLoggedIn, loggedCheker } = require('../controllers/users/logged.js');
-
+const roomController = require("../controllers/rooms")
 
 
 function initAuthControllers(app, passport)  {
@@ -22,6 +22,11 @@ function initAuthControllers(app, passport)  {
     app.get('/account', isLoggedIn, sendHtml.account);
 
 
+    //----------Rooms API----------------------------
+
+    // юзер выбирает на ui комнаты и кидает их пост запросом на 
+    app.post("/addNewRooms", roomController.saveRooms, sendHtml.success  ) // тут бы еще нужно определить есть ли у пользователя созраеннные комнаты, либо он первый раз
+    app.get("/getUserRooms", isLoggedIn, roomController.getRooms)
     
     //----------Users API------------------------
     app.post('/register',urlencodedParser,
