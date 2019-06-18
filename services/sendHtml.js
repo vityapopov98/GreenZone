@@ -11,11 +11,21 @@ const kitchenDevices = (req, res ) => {
 }
 
 const login = (req, res ) => {
-    res.sendFile(config.viewsDir + "login.html")
+    if (req.isAuthenticated()) {
+        res.redirect("/account")
+    }
+    else {
+        res.sendFile(config.viewsDir + "login.html")
+    }
 }
 
 const registration = (req, res ) => {
-    res.sendFile(config.viewsDir + "registration.html")
+    if (req.isAuthenticated()) {
+        res.redirect("/account")
+    }
+    else {
+        res.sendFile(config.viewsDir + "registration.html")
+    }
 }
 
 const store = (req, res ) => {
