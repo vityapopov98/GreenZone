@@ -25,6 +25,8 @@ var saveBtn = document.querySelector('.saveBtn');
 var livingroom = document.getElementById('livingroom');
 var bedroom = document.getElementById('bedroom');
 var childroom = document.getElementById('childroom');
+var kitchen = document.getElementById('kitchen');
+var balcony = document.getElementById('balcony');
 var bathroom = document.getElementById('bathroom');
 var userroom1 = document.getElementById('userroom1');
 
@@ -46,11 +48,14 @@ saveBtn.addEventListener('click', (event) => {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-          "livingroom": livingroom.value,
-          "bedroom": bedroom.value,
-          "bathroom": bathroom.value,
-          "childroom": childroom.value,
-          "userroom1": userroom1.value
+          "bathroom": bathroom.checked,
+          "bedroom": bedroom.checked,
+          "kitchen": kitchen.checked,
+          "childroom": childroom.checked,
+          "balcony": balcony.checked,
+          "userRoom0": userRoom0.checked,
+          "userRoom1": userRoom1.checked,
+          "userRoom2": userRoom2.checked
       })
   }
   fetch("/addNewRooms", options).then(response => {
