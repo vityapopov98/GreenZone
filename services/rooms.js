@@ -25,7 +25,7 @@ function writeUserRooms(bathroom, bedroom, kitchen, childroom, balcony,
 function getUserRooms(userId) { // этот параметр у юзера в req.user
     return Room.findOne({
         where: {
-            userId
+            id: userId
         }
      }) 
 }

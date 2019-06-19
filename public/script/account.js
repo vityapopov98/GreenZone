@@ -41,7 +41,31 @@ cancelBtn.addEventListener('click',()=>{
   addBtn.classList.toggle('invisible'); 
 })
 
-//dfdf
+//отобразить имеющееся
+fetch('/getUserRooms').then(response=>{
+  console.log(response)
+  if(response.ok){
+    console.log('i get users rooms');
+    return response.json();
+  }
+  else{
+      console.log('er get rooms :(');
+      throw new Error ('jio[hfhf');
+  }
+}).then(json=>{
+  console.log(json);
+    bathroom.checked = json.bathroom;
+    bedroom.checked = json.bedroom;
+    kitchen.checked = json.kitchen;
+    childroom.checked = json.childroom;
+    balcony.checked = json.balcony;
+    userRoom0.checked = json.userRoom0;
+    userRoom1.checked = json.userRoom1;
+    userRoom2.checked = json.userRoom2;
+
+})
+
+//сохранить изменения
 saveBtn.addEventListener('click', (event) => {
   const options = {
       method:"post",
