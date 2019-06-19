@@ -46,5 +46,3 @@ app.listen(config.port, err => {
     if (!err) console.log('Server started on ' + config.port + ' port');
     else console.error('Server not started');
 });
-
-

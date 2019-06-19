@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <script async src="script.js"></script>
+    <!-- <script async src="script/script.js"></script> -->
     <script async src="script/account.js"></script>
     <title>Личный кабинет</title>
 </head>
@@ -109,9 +109,40 @@
         <li><h3>Кухня</h3></li>
         <li><h3>Спальня</h3></li>
         <li><h3>Гостиная</h3></li>
-        <li><a href="">Добавить</a></li>
+        <!-- <li><a href="">Добавить</a></li> -->
 
+
+        <div class="addRooms invisible">
+           <li>
+                <label for="livingroom">Гостиная</label>
+                <input type="checkbox" name="livingroom" id="livingroom">
+           </li> 
+
+           <li>
+               <label for="bedroom">Спальня</label>
+               <input type="checkbox" name="bedroom" id="bedroom">
+           </li>
+
+           <li>
+               <label for="bathroom">Ванная</label>
+               <input type="checkbox" name="bathroom" id="bathroom">
+           </li>
+
+           <li>
+               <label for="childroom">Детская</label>
+               <input type="checkbox" name="childroom" id="childroom">
+           </li>
+
+           <li>
+               <label for="userroom1">Ваша комната 1</label>
+               <input type="checkbox" name="userRoom1" id="userroom1">
+           </li>
+           <button class="saveBtn">Сохранить</button>
+           <button class="cancelBtn">Отменить</button>
+        </div>
+        <button class="addBtn">Добавить</button>
     </ul>
+    
     
         
 </div>

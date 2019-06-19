@@ -56,7 +56,7 @@ function start() {
     //     };
     // };
 
-    email.addEventListener('keydown', emailErrorHandler.delayed(2000));
+    email.addEventListener('keydown', emailErrorHandler.delayed(500));
     
 //ненужный как мне кажется
     password.addEventListener('input', () => {
@@ -66,7 +66,7 @@ function start() {
         // }
     });
 
-    repassword.addEventListener('keydown', repasswordErrorHandler.delayed(2000));
+    repassword.addEventListener('keydown', repasswordErrorHandler.delayed(500));
 
     submitBtn.addEventListener('click', () => {       
         if(password.value===repassword.value){//если пользователь ввел парольдва раза правильно
