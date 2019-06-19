@@ -1,6 +1,10 @@
 const bCrypt = require('bcryptjs');
 const { User } = require('../database/tables')
 
+
+
+
+
 function getUserById(userId) {
     return User.findOne({
         where: {

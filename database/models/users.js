@@ -23,6 +23,12 @@ module.exports = function(sequelize, Sequelize) {
         surname: {
             type: Sequelize.STRING, 
             allowNull: false 
+        },
+        climateStationId: {
+            type: Sequelize.INTEGER 
+        },
+        thermostatId: {
+            type: Sequelize.INTEGER 
         }
     });
 

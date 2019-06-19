@@ -8,9 +8,8 @@ module.exports = function(sequelize, Sequelize) {
         bathroom: {
             type: Sequelize.BOOLEAN,
             defaultValue: false
-
         },
-        badroom: {
+        bedroom: {
             type: Sequelize.BOOLEAN,
             defaultValue: false
         },
@@ -37,10 +36,6 @@ module.exports = function(sequelize, Sequelize) {
         userRoom2: {
             type: Sequelize.BOOLEAN,
             defaultValue: false
-        },
-        userId: { // тут то же число, что и id в таблице юзеров, по этому параметру мы и свяжем их
-            type:Sequelize.INTEGER,
-            allowNull: false
         }
 
     });
