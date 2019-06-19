@@ -43,7 +43,7 @@ function saveRooms(req, res, next) {
 async function getRooms(req, res, next) {
     const userId = req.user.id
     try {
-        const response = await roomsApi. getUserRooms(userId)
+        const response = await roomsApi.getUserRooms(userId)
         return res.json(response)
     }
     catch(error) {
