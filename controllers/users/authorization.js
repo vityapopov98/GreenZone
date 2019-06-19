@@ -3,7 +3,7 @@
 const { validationResult } = require('express-validator/check');
 const UserApi = require("../../services/user")
 const {validators } = require("./errorStrings")
-
+const roomsApi = require("../../services/rooms") 
 
 function loginUser(req, email, password, next)  { //некст нас не кинет на следующий обработчик
     const res = req.res;
@@ -31,10 +31,9 @@ function loginUser(req, email, password, next)  { //некст нас не ки�
 
 function registerUser(req, email, password, done) {
     const res = req.res;
-    console.log(req)
     const name = req.body.name
     const surname = req.body.surname
-    console.log(name)
+
     const errors = validationResult(req); 
     if (!errors.isEmpty()) {
         res.statusCode = 406;
@@ -52,6 +51,10 @@ function registerUser(req, email, password, done) {
                 if (!newUser) {
                     throw new Error(validators.register.userNotCreated);
                 }
+
+                 // создать пустую строку в rooms
+                console.log(newUser)
+                roomsApi.registrationUsersRoom(newUser.id);
 
                 done(null, newUser); //все ок
             }).catch(err => {

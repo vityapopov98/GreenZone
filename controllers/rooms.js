@@ -24,10 +24,14 @@ function saveRooms(req, res, next) {
     const userRoom1 = listsRooms.userRoom1
     const userRoom2 = listsRooms.userRoom2 
     const userId = listsRooms.userId 
+    //const userId = req.user.id
     console.log(badroom)
+
+    console.log(userId)
+
     try {
-    roomsApi.writeUserRooms(bathroom, badroom, kitchen, childroom, 
-        balcony, userRoom0, userRoom1, userRoom2, userId)
+        roomsApi.writeUserRooms(bathroom, badroom, kitchen, childroom, 
+            balcony, userRoom0, userRoom1, userRoom2, userId)
     }
     catch(error) {
         console.error("Rooms saving error ", error)

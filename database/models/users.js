@@ -24,11 +24,11 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING, 
             allowNull: false 
         },
-        climatStationId: {
-
+        climateStationId: {
+            type: Sequelize.INTEGER 
         },
         thermostatId: {
-            
+            type: Sequelize.INTEGER 
         }
     });
 
