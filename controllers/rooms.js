@@ -16,21 +16,21 @@ function saveRooms(req, res, next) {
     // }
     
     const bathroom = listsRooms.bathroom 
-    const badroom = listsRooms.badroom
+    const bedroom = listsRooms.bedroom//может тут все таки bedroom? поменял
     const kitchen = listsRooms.kitchen
     const childroom = listsRooms.childroom
     const balcony = listsRooms.balcony
     const  userRoom0 = listsRooms.userRoom0 
     const userRoom1 = listsRooms.userRoom1
     const userRoom2 = listsRooms.userRoom2 
-    const userId = listsRooms.userId 
-    //const userId = req.user.id
-    console.log(badroom)
+    //const userId = listsRooms.userId 
+    const userId = req.user.id
+    console.log(bedroom)
 
     console.log(userId)
 
     try {
-        roomsApi.writeUserRooms(bathroom, badroom, kitchen, childroom, 
+        roomsApi.writeUserRooms(bathroom, bedroom, kitchen, childroom, 
             balcony, userRoom0, userRoom1, userRoom2, userId)
     }
     catch(error) {
@@ -43,7 +43,7 @@ function saveRooms(req, res, next) {
 async function getRooms(req, res, next) {
     const userId = req.user.id
     try {
-        const response = await roomsApi. getUserRooms(userId)
+        const response = await roomsApi.getUserRooms(userId)
         return res.json(response)
     }
     catch(error) {
