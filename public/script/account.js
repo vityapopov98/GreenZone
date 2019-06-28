@@ -15,11 +15,28 @@ header.addEventListener("click", function(){
   menu.classList.toggle("dropdown");
 })
 
+//добавить устройства
+var addDeviceBtn = document.querySelector('#addDevicesBtn');
+var addDevicesList = document.querySelector('.addDevices');
+var cancelDeviceBtn = document.querySelector('#cancelDeviceBtn');
+var saveDeviceBtn = document.querySelector('#saveDeviceBtn');
+var roomForDevice = document.getElementById('choseRoomForDevices');
+
+addDevicesBtn.addEventListener('click', ()=>{
+  addDevicesList.classList.toggle('invisible');
+  addDeviceBtn.classList.toggle('invisible');
+});
+
+cancelDevicesBtn.addEventListener('click',()=>{
+  addDevicesList.classList.toggle('invisible');
+  addDeviceBtn.classList.toggle('invisible'); 
+})
+
 //добавить комнаты
-var addBtn = document.querySelector('.addBtn');
+var addRoomsBtn = document.querySelector('#addRoomsBtn');
 var addRoomsList = document.querySelector('.addRooms');
-var cancelBtn = document.querySelector('.cancelBtn');
-var saveBtn = document.querySelector('.saveBtn');
+var cancelRoomsBtn = document.querySelector('#cancelRoomsBtn');
+var saveRoomsBtn = document.querySelector('#saveRoomsBtn');
 
 //сами комнаты
 var livingroom = document.getElementById('livingroom');
@@ -31,14 +48,14 @@ var bathroom = document.getElementById('bathroom');
 var userroom1 = document.getElementById('userroom1');
 
 
-addBtn.addEventListener('click', ()=>{
+addRoomsBtn.addEventListener('click', ()=>{
   addRoomsList.classList.toggle('invisible');
-  addBtn.classList.toggle('invisible');  
+  addRoomsBtn.classList.toggle('invisible');  
 })
 
-cancelBtn.addEventListener('click',()=>{
+cancelRoomsBtn.addEventListener('click',()=>{
   addRoomsList.classList.toggle('invisible');
-  addBtn.classList.toggle('invisible'); 
+  addRoomsBtn.classList.toggle('invisible'); 
 })
 
 //отобразить имеющееся
@@ -63,10 +80,28 @@ fetch('/getUserRooms').then(response=>{
     userRoom1.checked = json.userRoom1;
     userRoom2.checked = json.userRoom2;
 
+    //
+  if(bathroom.checked){
+    roomForDevice.insertAdjacentHTML('beforeend', ` <option value="">Ванная</option>`)
+  }
+  if(bedroom.checked){
+    roomForDevice.insertAdjacentHTML('beforeend', ` <option value="">Спальня</option>`)
+  }
+  if(kitchen.checked){
+    roomForDevice.insertAdjacentHTML('beforeend', ` <option value="">Кухня</option>`)
+  }
+  if(childroom.checked){
+    roomForDevice.insertAdjacentHTML('beforeend', ` <option value="">Детская</option>`)
+  }
+  if(balcony.checked){
+    roomForDevice.insertAdjacentHTML('beforeend', ` <option value="">Балкон</option>`)
+  }
+    //(bathroom.checked) ? roomForDevice.insertAdjacentHTML('beforeend', ` <option value="">Ванная</option>`) : console.log("hjkh");
+
 })
 
 //сохранить изменения
-saveBtn.addEventListener('click', (event) => {
+saveRoomsBtn.addEventListener('click', (event) => {
   const options = {
       method:"post",
       headers: {

@@ -101,6 +101,33 @@
             </div>
             </li></ul>
         </li>
+<!-- adding devices -->
+
+<div class="addDevices invisible">
+<li>
+   <!-- <label for="deviceName">Устройство</label>
+   <select name="deviceName" id="">
+       <option value="termostat">Термостат</option>
+       <option value="electricCounter">Эллектрический Счетчик</option>
+       <option value="light"> Умный свет</option>
+       <option value="hygrometer">Гигрометр</option>
+       <option value="termometer">Термометр</option>
+   </select> -->
+   <label for="deviceId">ID устройства</label>
+   <input type="text" name="deviceId" placeholder="id устройства">
+   <label for="roomName">Комната устройства</label>
+   <select name="roomName" id="choseRoomForDevices">
+       <!-- <option value="">Нет комнат</option> -->
+   </select>
+   
+</li>
+
+<button class="saveBtn" id="saveDevicesBtn">Сохранить</button>
+<button class="cancelBtn" id="cancelDevicesBtn">Отменить</button>
+</div>
+<button class="addBtn" id="addDevicesBtn">Добавить</button>
+
+<!-- end of adding devices -->
     </ul>
 
     
@@ -118,8 +145,6 @@
                 <label for="livingroom">Гостиная</label>
                 <input type="checkbox" name="livingroom" id="livingroom">
            </li>  -->
-
-           
 
            <li>
                <label for="bathroom">Ванная</label>
@@ -153,10 +178,10 @@
                 <label for="userRoom2">Ваша комната 2</label>
                 <input type="checkbox" name="userRoom2" id="userRoom2">
             </li>
-           <button class="saveBtn">Сохранить</button>
-           <button class="cancelBtn">Отменить</button>
+           <button class="saveBtn" id="saveRoomsBtn">Сохранить</button>
+           <button class="cancelBtn" id="cancelRoomsBtn">Отменить</button>
         </div>
-        <button class="addBtn">Добавить</button>
+        <button class="addBtn" id="addRoomsBtn">Добавить</button>
     </ul>
     
     
